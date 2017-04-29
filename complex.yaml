@@ -1,7 +1,7 @@
 ---
 - config:
   - testset: "Complex tests"
-  - timeout: 100  # Increase timeout from the default 10 seconds
+  - timeout: 1000  # Increase timeout from the default 10 seconds
 
 - benchmark: 
   - name: "Complex post"
