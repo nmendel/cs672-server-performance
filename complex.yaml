@@ -1,0 +1,20 @@
+---
+- config:
+  - testset: "Complex tests"
+  - timeout: 100  # Increase timeout from the default 10 seconds
+
+- benchmark: 
+  - name: "Complex post"
+  - url: "/complex"
+  - method: "POST"
+  - body: '1\n2\n5\n'
+  - 'benchmark_runs': '10'
+  - output_file: 'benchmark-complex.csv'
+  - metrics:
+    - total_time
+    - total_time: sum
+    - total_time: mean
+    - total_time: mean_harmonic
+    - total_time: median
+    - total_time: std_deviation
+
