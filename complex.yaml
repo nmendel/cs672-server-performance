@@ -1,7 +1,7 @@
 ---
 - config:
   - testset: "Complex tests"
-  - timeout: 1000  # Increase timeout from the default 10 seconds
+  - timeout: 100  # Increase timeout from the default 10 seconds
 
 - benchmark: 
   - name: "Complex post"
@@ -9,7 +9,8 @@
   - method: "POST"
   - body: '1\n2\n5\n'
   - 'benchmark_runs': '10'
-  - output_file: 'benchmark-complex.csv'
+  - 'warmup_runs': '1'
+  - output_file: 'benchmark-complex-only-1hour.csv'
   - metrics:
     - total_time
     - total_time: sum
