@@ -8,7 +8,7 @@ import binascii
 from kafka import KafkaConsumer, KafkaProducer
 
 KAFKA_CONNECTION = os.environ.get('KAFKA_CONNECTION')
-ROUNDS = 700000
+ROUNDS = 100000
 
 producer = KafkaProducer(bootstrap_servers=KAFKA_CONNECTION)
 
